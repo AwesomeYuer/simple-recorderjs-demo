@@ -51,6 +51,8 @@ function startRecording() {
 
 		*/
 		audioContext = new AudioContext();
+		audioContext.sampleRate = 16000;
+		
 
 		//update the format 
 		document.getElementById("formats").innerHTML="Format: 1 channel pcm @ "+audioContext.sampleRate/1000+"kHz"
