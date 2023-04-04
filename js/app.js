@@ -2,7 +2,7 @@
 URL = window.URL || window.webkitURL;
 
 var gumStream; 						//stream from getUserMedia()
-rec = new Recorder(input,{numChannels:1,sampleRate:16000});						//Recorder.js object
+var rec = new Recorder(input,{numChannels:1,sampleRate:16000});						//Recorder.js object
 var input; 							//MediaStreamAudioSourceNode we'll be recording
 
 // shim for AudioContext when it's not avb. 
