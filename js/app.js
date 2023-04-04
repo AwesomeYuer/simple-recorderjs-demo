@@ -2,7 +2,7 @@
 URL = window.URL || window.webkitURL;
 
 var gumStream; 						//stream from getUserMedia()
-var rec; 							//Recorder.js object
+rec = new Recorder(input,{numChannels:1,sampleRate:16000});						//Recorder.js object
 var input; 							//MediaStreamAudioSourceNode we'll be recording
 
 // shim for AudioContext when it's not avb. 
@@ -65,7 +65,7 @@ function startRecording() {
 			Create the Recorder object and configure to record mono sound (1 channel)
 			Recording 2 channels  will double the file size
 		*/
-		rec = new Recorder(input,{numChannels:1,sampleRate:16000})
+		//rec = new Recorder(input,{numChannels:1,sampleRate:16000})
 
 		//start the recording process
 		rec.record()
